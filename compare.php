@@ -67,7 +67,6 @@ class Compare {
     }
 
     public static function getDifferences ($diffType = 14) {
-        //var_dump(self::$differences);
         return array_filter(self::$differences, function ($el) use ($diffType) {
             return ($el->differenceType == ($el->differenceType & $diffType));
         });
