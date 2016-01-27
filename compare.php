@@ -82,7 +82,7 @@ class Compare {
 
     protected static function findDifferences () {
         $diff = array();
-        $test = self::$test;
+        $test = clone self::$test;
         /* Find equals & missing & chaged items: */
         foreach (self::$base as $key => $val) {
             if (!array_key_exists($key, $test)) {
